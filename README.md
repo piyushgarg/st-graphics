@@ -6,6 +6,7 @@ Forked from [st-graphics](https://github.com/sergei-grechanik/st-graphics)
 Patches
   * bold is not bright
   * workingdir
+  * keyboard-select (taken from [ookami/st-fork](https://codeberg.org/ookami/st-fork))
 
 Configuration:
   * Noto Sans patched with Nerd Fonts (in particular `NotoSansM NFP`)
@@ -22,17 +23,42 @@ Keybindings
   * `Shift+PageUp/Down`: scroll up/down
   * `Ctrl+Shift+U`: copy url
   * `Ctrl+Shift+O`: copy command output
+  * `Ctrl+Shift+Escape`: keyboard select
 
 TODO:
-* check keyboard_select
-* check Vim Browse
-* keybindings
-  * vim motions
-* images
 * window title
 * ligatures -> try fira code font
 * dmenu for copyurl and copyout
 
+
+## Keyboard select
+
+When you run "keyboard\_select", you have 3 modes available:
+
+- move mode : to set the start of the selection;
+- select mode : to activate and set the end of the selection;
+- input mode : to enter the search criteria.
+
+### Shortcuts for move and select modes:
+
+    h, j, k, l:    move cursor left/down/up/right (also with arrow keys)
+    !, _, *:       move cursor to the middle of the line/column/screen
+    Backspace, $:  move cursor to the beginning/end of the line
+    PgUp, PgDown : move cursor to the beginning/end of the column
+    Home, End:     move cursor to the top/bottom left corner of the screen
+    /, ?:          activate input mode and search up/down
+    n, N:          repeat last search, up/down
+    s:             toggle move/selection mode
+    t:             toggle regular/rectangular selection type
+    Return:        quit keyboard_select, keeping the highlight of the selection
+    Escape:        quit keyboard_select
+
+With `h, j, k, l` (also with arrow keys), you can use a quantifier. Enter a
+number before hitting the appropriate key.
+
+### Shortcuts for input mode:
+
+    Return:        Return to the previous mode
 
 
 # st-graphics
