@@ -1,3 +1,40 @@
+# st-toki83w
+
+Forked from [st-graphics](https://github.com/sergei-grechanik/st-graphics)
+  * `graphics-with-patches` branch
+
+Patches
+  * bold is not bright
+  * workingdir
+
+Configuration:
+  * Noto Sans patched with Nerd Fonts (in particular `NotoSansM NFP`)
+  * Catppuccin Mocha color theme
+  * tab space 4
+  * alpha 1
+  * mouse cursor set to left ptr
+
+Keybindings
+  * `Ctrl+Shift+C`: copy to clipboard
+  * `Ctrl+Shift+V`: paste from clipboard
+  * `Ctrl+Shift+Y`: paste from selection
+  * `Ctrl+Shift+PageUp/Down/Home`: increase/decrease/reset font size
+  * `Shift+PageUp/Down`: scroll up/down
+  * `Ctrl+Shift+U`: copy url
+  * `Ctrl+Shift+O`: copy command output
+
+TODO:
+* check keyboard_select
+* check Vim Browse
+* keybindings
+  * vim motions
+* images
+* window title
+* ligatures -> try fira code font
+* dmenu for copyurl and copyout
+
+
+
 # st-graphics
 
 This is a fork of [st](https://st.suckless.org/) that implements a subset of
